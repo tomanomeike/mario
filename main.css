@@ -3,11 +3,53 @@ html {
   margin: 0;
   padding: 0;
 }
+.wrapper {
+  background-image: linear-gradient(
+    to bottom,
+    #3a82ab,
+    #409ab8,
+    #54b1c0,
+    #71c8c7,
+    #94decc
+  );
+}
 .ground {
   height: 170px;
   width: 100%;
   background-image: url("./img/ground_mini.png");
   background-repeat: repeat;
 }
+.mario {
+  position: relative;
+  -webkit-animation-name: moving;
+  -webkit-animation-duration: 4s;
+  animation-name: moving;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
 .castle {
+  display: flex;
+  justify-content: flex-end;
+}
+@keyframes moving {
+  0% {
+    left: 0px;
+    bottom: 0px;
+  }
+  /* 25% {
+    left: 100px;
+    bottom: 0px;
+  }
+  50% {
+    left: 200px;
+    bottom: 0px;
+  }
+  75% {
+    left: 300px;
+    bottom: 0px;
+  } */
+  100% {
+    left: 800px;
+    bottom: 0px;
+  }
 }
