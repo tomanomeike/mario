@@ -1,0 +1,13 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+.ground {
+  height: 170px;
+  width: 100%;
+  background-image: url("./img/ground_mini.png");
+  background-repeat: repeat;
+}
+.castle {
+}
