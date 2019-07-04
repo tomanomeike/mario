@@ -1,7 +1,7 @@
 body,
 html {
   margin: 0;
-  padding: 0;
+  height: 100%;
 }
 .wrapper {
   background-image: linear-gradient(
@@ -12,15 +12,21 @@ html {
     #71c8c7,
     #94decc
   );
+  height: 100%;
 }
 .ground {
-  height: 170px;
+  position: absolute;
+  bottom: 0;
   width: 100%;
+  height: 12vw;
   background-image: url("./img/ground_mini.png");
   background-repeat: repeat;
 }
-.mario {
-  position: relative;
+.mario img {
+  position: absolute;
+  bottom: 37vw;
+  height: 10vw;
+  width: 10vw;
   -webkit-animation-name: moving;
   -webkit-animation-duration: 4s;
   animation-name: moving;
@@ -28,10 +34,17 @@ html {
   animation-fill-mode: forwards;
 }
 .castle {
+  position: absolute;
+  bottom: 12vw;
+  right: 2vw;
   display: flex;
   justify-content: flex-end;
 }
-@keyframes moving {
+.castle img {
+  height: 30vw;
+  width: 30vw;
+}
+/* @keyframes moving {
   0% {
     left: 0px;
     bottom: 0px;
@@ -48,8 +61,38 @@ html {
     left: 300px;
     bottom: 0px;
   } */
-  100% {
-    left: 800px;
+/* 100% {
+    left: 100px;
     bottom: 0px;
+  }
+} */
+
+/* @keyframes moving {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  14% {
+    transform: translateX(-50%) translateY(-8px);
+  }
+  24% {
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+} */
+
+@keyframes moving {
+  0% {
+    transform: translateY(calc(250%));
+  }
+  /* 50% {
+    transform: translateX(100%);
+  }
+  75% {
+    transform: translateX(200%);
+  } */
+  100% {
+    transform: translateX(55vw) translateY(calc(250%));
   }
 }
